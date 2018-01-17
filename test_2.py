@@ -10,7 +10,7 @@ client = bigquery.Client(project="conductive-fold-191517")
 query = "SELECT 1"
 dataset = client.dataset('test_dataset')
 
-QUERY = ('SELECT artist_info.name as [artist_name] FROM [test_dataset.artist] as artist_info LIMIT 100')
+QUERY = ('SELECT artist_info.name as artist_name FROM [test_dataset.artist] as artist_info LIMIT 100')
 query_job = client.query(QUERY)  # API request
 rows = query_job.result()  # Waits for query to finish
 
