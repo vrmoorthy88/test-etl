@@ -7,7 +7,6 @@
 from google.cloud import bigquery
 
 client = bigquery.Client(project="conductive-fold-191517")
-query = "SELECT 1"
 dataset = client.dataset('test_dataset')
 
 QUERY = ('SELECT artist_info.name as artist_name FROM [test_dataset.artist] as artist_info LIMIT 100')
