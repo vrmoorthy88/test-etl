@@ -6,8 +6,8 @@
 # Run following code
 from google.cloud import bigquery
 
-client = bigquery.Client(project="your-project-id")
-query_results = client.run_sync_query(" SELECT * FROM `bigquery-public-data`.`hacker_news`.`comments` LIMIT 1000 ")
+client = bigquery.Client(project="conductive-fold-191517")
+query_results = client.run_sync_query("SELECT artist_info.name as [artist_name], artist_info.id as [artist_id] FROM [test_dataset.artist] as artist_info LIMIT 100")
 
 # Use standard SQL syntax for queries.
 # See: https://cloud.google.com/bigquery/sql-reference/
